@@ -1,0 +1,48 @@
+/* Firefox UI Styling - Graphite Inspired */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root {
+  --toolbar-bgcolor: #181825 !important;
+  --toolbar-color: #cdd6f4 !important;
+  --tab-bgcolor: #1e1e2e !important;
+  --tab-text-color: #cdd6f4 !important;
+  --tab-selected-bgcolor: #313244 !important;
+  --tab-hover-bgcolor: #1e1e2e !important;
+  --toolbar-field-focus-border-color: #cba6f7 !important;
+}
+
+#navigator-toolbox {
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+.tabbrowser-tab {
+  background-color: var(--tab-bgcolor) !important;
+  color: var(--tab-text-color) !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+  background-color: #45475a !important; /* Brighter contrast */
+  color: #ffffff !important; /* Make text pop more */
+  font-weight: bold !important;
+  border-bottom: 2px solid #cba6f7 !important; /* Optional: colored accent line */
+  box-shadow: inset 0 -1px 0 #cba6f7 !important; /* Optional: subtle highlight line */
+}
+
+
+.tabbrowser-tab:hover {
+  background-color: var(--tab-hover-bgcolor) !important;
+}
+
+#urlbar,
+.searchbar-textbox {
+  background-color: #1e1e2e !important;
+  color: #cdd6f4 !important;
+  border: 1px solid #cba6f7 !important;
+}
+
+#urlbar:focus,
+.searchbar-textbox:focus {
+  outline: none !important;
+  border-color: #cba6f7 !important;
+}
+

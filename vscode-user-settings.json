@@ -1,0 +1,76 @@
+{
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "JetBrainsMono NF",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.linkedEditing": true,
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "files.autoSave": "afterDelay",
+  "git.autofetch": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "npm.keybindingsChangedWarningShown": true,
+  "go.toolsManagement.autoUpdate": true,
+  "editor.formatOnPaste": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
+  },
+  "terminal.integrated.fontSize": 16,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontFamily": "JetBrainsMono NF",
+  "terminal.integrated.localEchoStyle": "dim",
+  "terminal.integrated.fontWeight": "normal",
+  "liveServer.settings.CustomBrowser": "firefox",
+  "liveServer.settings.fullReload": true,
+  "window.titleBarStyle": "custom",
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "window.commandCenter": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "auto",
+  "editor.codeLensFontFamily": "JetBrainsMono NF",
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.fontWeightBold": "bold",
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "material-icon-theme.files.color": "#90a4ae",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "workbench.colorCustomizations": {
+    // "editor.background": "#181825",
+    "editor.foreground": "#cdd6f4",
+    "editorCursor.foreground": "#cba6f7",
+    "editorLineNumber.foreground": "#585b70",
+    "editorLineNumber.activeForeground": "#cba6f7",
+    "sideBar.background": "#1e1e2e",
+    "sideBar.foreground": "#cdd6f4",
+    "activityBar.background": "#1e1e2e",
+    "tab.activeBackground": "#45475a",
+    "tab.inactiveBackground": "#1e1e2e",
+    "tab.activeForeground": "#ffffff",
+    "tab.inactiveForeground": "#7f849c",
+    "sideBarSectionHeader.background": "#313244",
+    "list.activeSelectionBackground": "#94e2d5",
+    "list.activeSelectionForeground": "#1e1e2e"
+  }
+}
