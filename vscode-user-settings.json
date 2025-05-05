@@ -57,7 +57,7 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "workbench.preferredLightColorTheme": "GitHub Light Default",
   "workbench.colorCustomizations": {
-    // "editor.background": "#181825",
+    "editor.background": "#181825",
     "editor.foreground": "#cdd6f4",
     "editorCursor.foreground": "#cba6f7",
     "editorLineNumber.foreground": "#585b70",
@@ -70,7 +70,7 @@
     "tab.activeForeground": "#ffffff",
     "tab.inactiveForeground": "#7f849c",
     "sideBarSectionHeader.background": "#313244",
-    "list.activeSelectionBackground": "#94e2d5",
-    "list.activeSelectionForeground": "#1e1e2e"
+    "list.activeSelectionBackground": "#cba6f786",
+    "list.activeSelectionForeground": "#cdd6f4"
   }
 }
