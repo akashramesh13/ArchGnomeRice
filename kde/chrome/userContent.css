@@ -1,0 +1,19 @@
+@-moz-document url("about:blank"), url("about:newtab"), url("about:home") {
+  body {
+    background-color: #000000 !important;      /* Pure black background */
+    color: #d91f64 !important;                 /* Neon pink text */
+  }
+
+  a, a:visited {
+    color: #ffde66 !important;                 /* Neon yellow links */
+  }
+
+  a:hover {
+    color: #ffffff !important;                 /* White on hover for contrast */
+  }
+
+  ::selection {
+    background: #d91f64 !important;            /* Neon pink highlight */
+    color: #000000 !important;
+  }
+}

@@ -1,0 +1,145 @@
+/* Firefox UI Styling - NeonBloom Inspired - Fix Grey Top & Bottom Border Only */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* --- NeonBloom Theme Variables --- */
+
+/* Force pure black on tab bar container and widget area */
+#TabsToolbar,
+#tabbrowser-tabs,
+#nav-bar,
+#toolbar-menubar,
+#toolbar-menubar .toolbar-items,
+#nav-bar-customization-target,
+#navigator-toolbox > #toolbar-menubar + toolbar,
+#TabsToolbar > .toolbar-items,
+#toolbar-menubar + toolbar,
+#nav-bar-customization-target,
+#navigator-toolbox > .toolbar-items,
+#navigator-toolbox {
+  background-color: #000000 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#PersonalToolbar {
+  background-color: #000000 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+/* Keep neon pink bottom border on selected tab even when hovered */
+.tabbrowser-tab[selected="true"]:hover {
+  border-bottom: 3px solid #d91f64 !important;
+  background-color: #000000 !important; /* Keep black background */
+  color: #ffffff !important;
+  box-shadow: none !important; /* No extra shadows */
+}
+
+
+/* Remove any transparent or translucent effects */
+#navigator-toolbox,
+#nav-bar,
+#TabsToolbar {
+  background-image: none !important;
+  background-color: #000000 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Widget area (where search, bookmark, etc. live) */
+#toolbar-menubar,
+#nav-bar-customization-target,
+.toolbar-items {
+  background-color: #000000 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+:root {
+  --toolbar-bgcolor: #000000 !important;
+  --toolbar-color: #ffffff !important;
+  --tab-bgcolor: #000000 !important;
+  --tab-text-color: #ffffff !important;
+  --tab-selected-color: #000000 !important;
+  --tab-selected-bgcolor: #d91f64 !important;
+  --tab-hover-bgcolor: #000000 !important;
+  --toolbar-field-focus-border-color: #d91f64 !important;
+}
+
+/* --- Main Toolbar Background --- */
+#navigator-toolbox {
+  background-color: var(--toolbar-bgcolor) !important;
+  border-bottom: none !important; /* Remove any toolbar border */
+  box-shadow: none !important;    /* Remove toolbar shadow */
+}
+
+/* --- Tab Styling (Black background, no side borders/shadows) --- */
+.tabbrowser-tab {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important; /* Remove any box shadow around tab */
+  margin: 0 !important; /* Reset margins that might create gaps */
+}
+
+/* --- Selected Tab: Neon Pink Bottom Border Only --- */
+.tabbrowser-tab[selected="true"] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+  border-bottom: 3px solid #d91f64 !important; /* Thick neon pink bottom border */
+  box-shadow: none !important; /* Remove all shadows to avoid side glows */
+  z-index: 10 !important;
+}
+
+/* --- Hover Tab --- */
+.tabbrowser-tab:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: none !important; /* No border on hover */
+  box-shadow: none !important;
+}
+
+/* --- URL Bar & Search Bar Styling --- */
+#urlbar,
+.searchbar-textbox {
+  background-color: var(--tab-bgcolor) !important;
+  color: var(--tab-selected-bgcolor) !important;
+  border: 1px solid var(--tab-selected-bgcolor) !important;
+}
+
+#urlbar:focus,
+.searchbar-textbox:focus {
+  outline: none !important;
+  border-color: var(--toolbar-field-focus-border-color) !important;
+  box-shadow: 0 0 6px #d91f64 !important;
+}
+
+/* --- Optional: Input Text --- */
+#urlbar-input,
+.searchbar-textbox {
+  color: var(--tab-selected-bgcolor) !important;
+}
+
+/* --- About Pages Theming --- */
+@-moz-document url("about:blank"), url("about:newtab"), url("about:home") {
+  body {
+    background-color: #000000 !important;
+    color: #d91f64 !important;
+  }
+
+  a, a:visited {
+    color: #ffde66 !important;
+  }
+
+  a:hover {
+    color: #ffffff !important;
+  }
+
+  ::selection {
+    background: #d91f64 !important;
+    color: #000000 !important;
+  }
+}
