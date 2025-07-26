@@ -2,21 +2,24 @@
 set -e
 
 echo "📦 Unzipping zsh-config.zip..."
-unzip -o zsh-config.zip -d "$HOME"
+unzip -o zsh-config.zip -d "$HOME/zsh-config-temp"
 
 echo "🔗 Linking .zshrc and .p10k.zsh..."
 mv -f "$HOME/.zshrc" "$HOME/.zshrc.backup.$(date +%s)" 2>/dev/null || true
 mv -f "$HOME/.p10k.zsh" "$HOME/.p10k.zsh.backup.$(date +%s)" 2>/dev/null || true
 
-cp -f "$HOME/.zshrc" "$HOME"
-[ -f "$HOME/.p10k.zsh" ] && cp -f "$HOME/.p10k.zsh" "$HOME"
+cp -f "$HOME/zsh-config-temp/.zshrc" "$HOME"
+[ -f "$HOME/zsh-config-temp/.p10k.zsh" ] && cp -f "$HOME/zsh-config-temp/.p10k.zsh" "$HOME"
 
 echo "🔄 Moving .oh-my-zsh to home directory..."
 if [ -d "$HOME/.oh-my-zsh" ]; then
     echo "Backing up existing .oh-my-zsh"
     mv "$HOME/.oh-my-zsh" "$HOME/.oh-my-zsh.backup.$(date +%s)"
 fi
-cp -r "$HOME/.oh-my-zsh" "$HOME"
+cp -r "$HOME/zsh-config-temp/.oh-my-zsh" "$HOME"
+
+echo "🧹 Cleaning up..."
+rm -rf "$HOME/zsh-config-temp"
 
 echo "✅ Setup complete! Restart your terminal or run: source ~/.zshrc"
 

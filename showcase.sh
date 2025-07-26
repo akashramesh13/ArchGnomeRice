@@ -24,10 +24,10 @@ center "${FG}──────────────────────�
 echo
 
 # Fetch tool
-# if command -v fastfetch &> /dev/null; then
-#     fastfetch
-if command -v neofetch &> /dev/null; then
-    neofetch
+if command -v fastfetch &> /dev/null; then
+  fastfetch
+# if command -v neofetch &> /dev/null; then
+#    neofetch
 else
     echo "No fetch tool installed."
 fi
@@ -39,6 +39,6 @@ fi
 # Closing line
 center "🌈 Ricing is an art..." | pv -qL 10 | lolcat
 echo
-center "${FG}✨ Stay Graphite, Stay Teal ✨${RESET}"
+center "${FG}🐾 Wake, Code, Catppuccin, Repeat ✨${RESET}"
 echo
 
