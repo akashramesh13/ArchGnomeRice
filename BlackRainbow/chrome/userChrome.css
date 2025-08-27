@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------
    Firefox Pure Black
-   Black foundation + rainbow accents
+   Black foundation + flowing rainbow accents
    --------------------------------------------------------- */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -11,7 +11,7 @@
   --toolbar-color: #cdd6f4 !important;
   --tab-bgcolor: #000000 !important;
   --tab-text-color: #cdd6f4 !important;
-  --tab-selected-bgcolor: #111111 !important;
+  --tab-selected-bgcolor: #000000 !important;
   --tab-hover-bgcolor: #1e1e2e !important;
   --toolbar-field-focus-border-color: #cba6f7 !important;
 }
@@ -34,12 +34,10 @@
   border: none !important;
 }
 
+/* ---------------- Selected Tab ---------------- */
 .tabbrowser-tab[selected="true"] {
-  background-color: var(--tab-selected-bgcolor) !important;
-  color: #ffffff !important;
+  background-color: #000000 !important; /* pure black */
   font-weight: bold !important;
-
-  /* Rainbow border around bottom + sides */
   border: 2px solid transparent !important;
   border-image: linear-gradient(
       90deg,
@@ -54,11 +52,50 @@
     1 !important;
   border-image-slice: 1 !important;
   border-top: none !important;
-
   box-shadow: 0 0 4px #ff0000, 0 0 8px #ff7f00, 0 0 12px #ffee00,
     0 0 16px #33ff00, 0 0 20px #00aaff, 0 0 24px #8b00ff, 0 0 28px #ff1493 !important;
+  opacity: 1 !important;
 }
 
+/* Force inner tab content fully black */
+.tabbrowser-tab[selected="true"] .tab-background,
+.tabbrowser-tab[selected="true"] .tab-content {
+  background-color: #000000 !important;
+}
+
+/* ---------------- Rainbow Flowing Text ---------------- */
+@keyframes rainbow-flow {
+  0% {
+    background-position: 0% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+.tabbrowser-tab[selected="true"] .tab-label {
+  background-image: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffee00,
+    #33ff00,
+    #00aaff,
+    #8b00ff,
+    #ff1493
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-flow 4s linear infinite; /* gentle flow */
+}
+
+/* ---------------- Hover ---------------- */
 .tabbrowser-tab:hover:not([selected="true"]) {
   background-color: var(--tab-hover-bgcolor) !important;
   color: #ffffff !important;
@@ -77,12 +114,11 @@
 .searchbar-textbox[focused="true"] {
   background-color: #111111 !important;
   color: #ffffff !important;
-
   box-shadow: 0 0 4px #ff0000, 0 0 8px #ff7f00, 0 0 12px #ffee00,
     0 0 16px #33ff00, 0 0 20px #00aaff, 0 0 24px #8b00ff, 0 0 28px #ff1493 !important;
 }
 
-/* Toolbar buttons (home, extensions, etc.) */
+/* Toolbar buttons */
 #nav-bar toolbarbutton {
   background-color: #000000 !important;
   border-radius: 6px !important;
@@ -93,7 +129,7 @@
   background: #313244 !important;
 }
 
-/* ---------------- Rainbow Text Utility ---------------- */
+/* Rainbow text utility */
 .rainbow-text {
   background-image: linear-gradient(
     90deg,
@@ -111,12 +147,12 @@
   color: transparent !important;
 }
 
-/* ---------------- Hamburger Menu ---------------- */
+/* Hamburger Menu */
 #appMenu-popup,
 #appMenu-mainView,
 #appMenu-protonMainView,
 .panel-subview-body {
-  background: #000000 !important; /* pure black base */
+  background: #000000 !important;
   border: 1px solid #ff69b4 !important;
   border-radius: 6px !important;
   -moz-appearance: none !important;
@@ -134,7 +170,6 @@
 #appMenu-popup menu:hover,
 #appMenu-popup menuitem:hover,
 .panel-subview-body > toolbarbutton:hover {
-  /* Rainbow gradient background */
   background: linear-gradient(
     90deg,
     #ff0000,
@@ -149,7 +184,7 @@
   cursor: pointer !important;
 }
 
-/* ---------------- Context Menus ---------------- */
+/* Context Menus */
 menupopup,
 popup,
 panel {
@@ -169,7 +204,6 @@ menupopup > menuitem {
 
 menupopup > menu:hover,
 menupopup > menuitem:hover {
-  /* Rainbow gradient background */
   background: linear-gradient(
     90deg,
     #ff0000,
@@ -184,7 +218,7 @@ menupopup > menuitem:hover {
   cursor: pointer !important;
 }
 
-/* ---------------- New Tab / Home ---------------- */
+/* New Tab / Home */
 @-moz-document url("about:blank"), url("about:newtab"), url("about:home") {
   body {
     background-color: #000000 !important;
