@@ -1,0 +1,193 @@
+/* ---------------------------------------------------------
+   Firefox Pure Black
+   Black foundation + rainbow accents
+   --------------------------------------------------------- */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ---------------- Root Vars ---------------- */
+:root {
+  --toolbar-bgcolor: #000000 !important;
+  --toolbar-color: #cdd6f4 !important;
+  --tab-bgcolor: #000000 !important;
+  --tab-text-color: #cdd6f4 !important;
+  --tab-selected-bgcolor: #111111 !important;
+  --tab-hover-bgcolor: #1e1e2e !important;
+  --toolbar-field-focus-border-color: #cba6f7 !important;
+}
+
+/* ---------------- Tab Bar Pure Black ---------------- */
+#TabsToolbar,
+#titlebar,
+#nav-bar,
+#PersonalToolbar {
+  background-color: #000000 !important;
+  -moz-appearance: none !important;
+}
+
+/* ---------------- Tabs ---------------- */
+.tabbrowser-tab {
+  background-color: var(--tab-bgcolor) !important;
+  color: var(--tab-text-color) !important;
+  border-radius: 6px !important;
+  margin: 2px 4px !important;
+  border: none !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+  background-color: var(--tab-selected-bgcolor) !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+
+  /* Rainbow border around bottom + sides */
+  border: 2px solid transparent !important;
+  border-image: linear-gradient(
+      90deg,
+      #ff0000,
+      #ff7f00,
+      #ffee00,
+      #33ff00,
+      #00aaff,
+      #8b00ff,
+      #ff1493
+    )
+    1 !important;
+  border-image-slice: 1 !important;
+  border-top: none !important;
+
+  box-shadow: 0 0 4px #ff0000, 0 0 8px #ff7f00, 0 0 12px #ffee00,
+    0 0 16px #33ff00, 0 0 20px #00aaff, 0 0 24px #8b00ff, 0 0 28px #ff1493 !important;
+}
+
+.tabbrowser-tab:hover:not([selected="true"]) {
+  background-color: var(--tab-hover-bgcolor) !important;
+  color: #ffffff !important;
+}
+
+/* ---------------- URL Bar + Toolbar Items ---------------- */
+#urlbar,
+.searchbar-textbox {
+  background-color: #000000 !important;
+  color: #cdd6f4 !important;
+  border: 1px solid #cba6f7 !important;
+  border-radius: 6px !important;
+}
+
+#urlbar[focused="true"],
+.searchbar-textbox[focused="true"] {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+
+  box-shadow: 0 0 4px #ff0000, 0 0 8px #ff7f00, 0 0 12px #ffee00,
+    0 0 16px #33ff00, 0 0 20px #00aaff, 0 0 24px #8b00ff, 0 0 28px #ff1493 !important;
+}
+
+/* Toolbar buttons (home, extensions, etc.) */
+#nav-bar toolbarbutton {
+  background-color: #000000 !important;
+  border-radius: 6px !important;
+  padding: 2px !important;
+}
+
+#nav-bar toolbarbutton:hover {
+  background: #313244 !important;
+}
+
+/* ---------------- Rainbow Text Utility ---------------- */
+.rainbow-text {
+  background-image: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffee00,
+    #33ff00,
+    #00aaff,
+    #8b00ff,
+    #ff1493
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* ---------------- Hamburger Menu ---------------- */
+#appMenu-popup,
+#appMenu-mainView,
+#appMenu-protonMainView,
+.panel-subview-body {
+  background: #000000 !important; /* pure black base */
+  border: 1px solid #ff69b4 !important;
+  border-radius: 6px !important;
+  -moz-appearance: none !important;
+  color: white !important;
+}
+
+#appMenu-popup menu,
+#appMenu-popup menuitem,
+.panel-subview-body > toolbarbutton {
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 4px 8px !important;
+}
+
+#appMenu-popup menu:hover,
+#appMenu-popup menuitem:hover,
+.panel-subview-body > toolbarbutton:hover {
+  /* Rainbow gradient background */
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffee00,
+    #33ff00,
+    #00aaff,
+    #8b00ff,
+    #ff1493
+  ) !important;
+  color: black !important;
+  cursor: pointer !important;
+}
+
+/* ---------------- Context Menus ---------------- */
+menupopup,
+popup,
+panel {
+  background: #000000 !important;
+  border: 1px solid #ff69b4 !important;
+  border-radius: 6px !important;
+  -moz-appearance: none !important;
+  color: white !important;
+}
+
+menupopup > menu,
+menupopup > menuitem {
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 4px 8px !important;
+}
+
+menupopup > menu:hover,
+menupopup > menuitem:hover {
+  /* Rainbow gradient background */
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffee00,
+    #33ff00,
+    #00aaff,
+    #8b00ff,
+    #ff1493
+  ) !important;
+  color: black !important;
+  cursor: pointer !important;
+}
+
+/* ---------------- New Tab / Home ---------------- */
+@-moz-document url("about:blank"), url("about:newtab"), url("about:home") {
+  body {
+    background-color: #000000 !important;
+    color: #cdd6f4 !important;
+  }
+}
