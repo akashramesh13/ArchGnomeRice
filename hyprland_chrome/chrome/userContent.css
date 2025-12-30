@@ -1,0 +1,17 @@
+/* ===============================
+   Firefox Content Styling
+   =============================== */
+
+@-moz-document url("about:blank"), url("about:newtab"), url("about:home") {
+  body {
+    background-color: #181825 !important;
+    color: #cdd6f4 !important;
+  }
+}
+
+/* Gentle code block polish */
+pre,
+code {
+  background-color: rgba(30, 30, 46, 0.8) !important;
+  border-radius: 6px;
+}
